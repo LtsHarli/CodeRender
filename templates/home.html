@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>CodeRender</title>
+  </head>
+  <body>
+    {% include 'partials/_header.html' %}
+    <div class="main-content">
+      <div class="editor-container">
+        <div class="code-editors" style="{% if code_boxes %}width:{{ code_boxes.get('width', '100%') }};height:{{ code_boxes.get('height', 'auto') }};{% endif %}">
+          <div class="code-editor">
+            <div class="editor-header">
+              <span class="editor-title">HTML</span>
+            </div>
+            <textarea id="html-input" placeholder="Enter your HTML code here">{{ html_code }}</textarea>
+          </div>
+          <div class="code-editor">
+            <div class="editor-header">
+              <span class="editor-title">CSS</span>
+            </div>
+            <textarea id="css-input" placeholder="Enter your CSS code here">{{ css_code }}</textarea>
+          </div>
+          <div class="code-editor">
+            <div class="editor-header">
+              <span class="editor-title">JavaScript</span>
+            </div>
+            <textarea id="js-input" placeholder="Enter your JavaScript code here">{{ js_code }}</textarea>
+          </div>
+        </div>
+        <button id="run-button">Run</button>
+        <div id="output-display" style="{% if output_display %}width:{{ output_display.get('width', '100%') }};height:{{ output_display.get('height', 'auto') }};{% endif %}"></div>
+      </div>
+    </div>
+    <script src="/static/js/home.js"></script>
+  </body>
+</html>

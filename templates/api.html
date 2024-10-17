@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Documentation</h1>
+    <h2>URL Parameters</h2>
+    <p>You can use URL parameters to pre-populate the code editors with your HTML, CSS, and JavaScript code.</p>
+    <h3>Format:</h3>
+    <pre>http://Harlie.uk/?html=|html|Your HTML code here|html|&css=|css|Your CSS code here|css|&js=|js|Your JavaScript code here|js|</pre>
+    <h3>Example:</h3>
+    <pre>http://Harlie.uk/?html=|html|&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Hello, World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;|html|&css=|css|body { font-family: Arial, sans-serif; }|css|&js=|js|console.log('Hello from JavaScript!');|js|&OutputDisplay=|OutputDisplay|width=500px?height=300px|OutputDisplay|&CodeBoxes=|CodeBoxes|width=800px?height=400px|CodeBoxes|</pre>
+    <h3>Explanation:</h3>
+    <ul>
+        <li>Use <code>|html|</code> to wrap your HTML code</li>
+        <li>Use <code>|css|</code> to wrap your CSS code</li>
+        <li>Use <code>|js|</code> to wrap your JavaScript code</li>
+        <li>Use <code>|OutputDisplay|</code> to set dimensions for the output display</li>
+        <li>Use <code>|CodeBoxes|</code> to set dimensions for the code editor boxes</li>
+    </ul>
+    <p>The code between these delimiters will be extracted and placed in the appropriate code editor when the page loads. The dimensions specified for OutputDisplay and CodeBoxes will be applied to their respective elements.</p>
+</body>
+</html>
